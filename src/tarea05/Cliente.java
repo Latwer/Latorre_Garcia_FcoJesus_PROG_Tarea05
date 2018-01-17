@@ -51,4 +51,26 @@ public class Cliente {
         this.localidad = cliente.localidad;
         this.codigoPostal = cliente.codigoPostal;
     }
+    public String getNombre(){
+        return nombre;
+    }
+    public String getDireccion(){
+        return direccion;
+    }
+    public String localidad(){
+        return localidad;
+    }
+    public String getCodigoPostal(){
+        return codigoPostal;
+    }
+    public int getIdentificador(){
+        return identificador;
+    }
+    /*public int getNumClientes(){
+        return numClientes;
+    }*/
+    /*public String getDni(){
+        return dni;
+    }*/
+    
 }
