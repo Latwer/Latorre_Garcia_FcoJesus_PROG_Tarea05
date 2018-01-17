@@ -72,5 +72,9 @@ public class Cliente {
     /*public String getDni(){
         return dni;
     }*/
+    //@Override
+    public String toString(){
+        return "Nombre: "+ nombre +", DNI: "+ dni +", Dirección: "+ direccion +", Localidad: "+ localidad+", Código postal: "+ codigoPostal+".";
+    }
     
 }
