@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tarea05;
 
 import java.util.regex.*;
 
 /**
- *
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
  */
 public class Cliente {
@@ -51,30 +45,36 @@ public class Cliente {
         this.localidad = cliente.localidad;
         this.codigoPostal = cliente.codigoPostal;
     }
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
-    public String getDireccion(){
+
+    public String getDireccion() {
         return direccion;
     }
-    public String localidad(){
+
+    public String localidad() {
         return localidad;
     }
-    public String getCodigoPostal(){
+
+    public String getCodigoPostal() {
         return codigoPostal;
     }
-    public int getIdentificador(){
+
+    public int getIdentificador() {
         return identificador;
     }
+
     /*public int getNumClientes(){
         return numClientes;
     }*/
-    /*public String getDni(){
+ /*public String getDni(){
         return dni;
     }*/
     //@Override
-    public String toString(){
-        return "Nombre: "+ nombre +", DNI: "+ dni +", Dirección: "+ direccion +", Localidad: "+ localidad+", Código postal: "+ codigoPostal+".";
+    public String toString() {
+        return "Nombre: " + nombre + ", DNI: " + dni + ", Dirección: " + direccion + ", Localidad: " + localidad + ", Código postal: " + codigoPostal + ".";
     }
-    
+
 }
