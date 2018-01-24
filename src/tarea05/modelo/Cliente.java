@@ -38,6 +38,8 @@ public class Cliente {
         } else {
             throw new ExcepcionAlquilerVehiculos("Código postal incorrecto.");
         }
+        numClientes++;
+        identificador = numClientes;
     }
 
     private boolean compruebaCodigoPostal(String codigoPostal) {
