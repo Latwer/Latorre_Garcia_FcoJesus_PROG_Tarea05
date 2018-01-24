@@ -9,14 +9,14 @@ public class Cliente {
 
     private String nombre, dni, direccion, localidad, codigoPostal;
     private int identificador;
-    private static int numClientes=0;
-    
+    private static int numClientes = 0;
+
     public Cliente(Cliente cliente) {
-        this.nombre = cliente.nombre;
-        this.dni = cliente.dni;
-        this.direccion = cliente.direccion;
-        this.localidad = cliente.localidad;
-        this.codigoPostal = cliente.codigoPostal;
+        nombre = cliente.getNombre();
+        dni = cliente.getDni();
+        direccion = cliente.getDireccion();
+        localidad = cliente.getLocalidad();
+        codigoPostal = cliente.getCodigoPostal();
     }
 
     public Cliente(String nombre, String dni, String direccion, String localidad, String codigoPostal) {
@@ -52,13 +52,11 @@ public class Cliente {
         return emparejador.matches();
     }
 
-    
-
     public String getNombre() {
         return nombre;
     }
-    
-    public String getDni(){
+
+    public String getDni() {
         return dni;
     }
 
@@ -74,17 +72,29 @@ public class Cliente {
         return codigoPostal;
     }
 
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+
+    public void setCodigoPostal(String codigoPostal) {
+        if (compruebaCodigoPostal(codigoPostal)) {
+            this.codigoPostal = codigoPostal;
+        } else {
+            throw new ExcepcionAlquilerVehiculos("Código postal incorrecto.");
+        }
+    }
+
     public int getIdentificador() {
         return identificador;
     }
 
-    /*public int getNumClientes(){
-        return numClientes;
-    }*/
-    
     @Override
     public String toString() {
         return "Cliente{" + "Nombre=" + nombre + ", DNI=" + dni + ", Dirección=" + direccion + ", Localidad=" + localidad + ", Código postal=" + codigoPostal + '}';
     }
-    
+
 }
