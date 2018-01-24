@@ -10,13 +10,13 @@ public class Turismo {
     private String matricula, marca, modelo;
     private int cilindrada;
     private boolean disponible;
-    
-    /*public Turismo(Turismo turismo) {
-		matricula = turismo.getMatricula();
-		marca = turismo.getMarca();
-		modelo = turismo.getModelo();
-		cilindrada = turismo.getCilindrada();
-	}*/
+
+    public Turismo(Turismo turismo) {
+        matricula = turismo.getMatricula();
+        marca = turismo.getMarca();
+        modelo = turismo.getModelo();
+        cilindrada = turismo.getCilindrada();
+    }
 
     public Turismo(String matricula, String marca, String modelo, int cilindrada) {
         //this.propietario=propietario;
@@ -43,4 +43,29 @@ public class Turismo {
         Matcher emparejador = patron.matcher(matricula);
         return emparejador.matches();
     }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getCilindrada() {
+        return cilindrada;
+    }
+
+    public boolean getDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+    
 }
