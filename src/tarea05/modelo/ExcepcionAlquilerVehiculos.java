@@ -1,13 +1,9 @@
-package tarea05;
+package tarea05.modelo;
 
 /**
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
  */
 public class ExcepcionAlquilerVehiculos extends RuntimeException {
-
-    public ExcepcionAlquilerVehiculos() {
-        this("Excepción de alquiler de vehículos.");
-    }
 
     public ExcepcionAlquilerVehiculos(String mensaje) {
         super(mensaje);

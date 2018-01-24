@@ -1,4 +1,4 @@
-package tarea05;
+package tarea05.modelo;
 
 /**
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
