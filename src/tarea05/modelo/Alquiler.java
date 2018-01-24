@@ -54,5 +54,10 @@ public class Alquiler {
     public double getPrecio() {
         return PRECIO_DIA * dias + turismo.getCilindrada() / 100;
     }
-    
+
+    @Override
+    public String toString() {
+        return String.format("Fecha entrada: %s, Días: %d  Precio: %.2f%n\tCliente: %s%n\tTurismo: %s",
+                FORMATO_FECHA.format(fecha), dias, getPrecio(), cliente, turismo);
+    }
 }
