@@ -67,5 +67,10 @@ public class Turismo {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
-    
+
+    @Override
+    public String toString() {
+        return String.format("Matrícula: %s, Marca: %s Modelo: %s Cilindrada: %d%n",
+                matricula, marca, modelo, cilindrada);
+    }
 }
