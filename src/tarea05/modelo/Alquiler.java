@@ -14,7 +14,7 @@ public class Alquiler {
     private int dias;
     private final SimpleDateFormat FORMATO_FECHA = new SimpleDateFormat("dd/MM/yyyy HH:mm");
     private final int MS_DIA = 1000 * 60 * 60 * 24;
-    private final double PRECIO_DIA = 10.0;
+    private final double PRECIO_DIA = 30.0;
 
     public Alquiler(Cliente cliente, Turismo turismo) {
         this.cliente = cliente;
@@ -49,6 +49,10 @@ public class Alquiler {
         long milisegundos = fechaFin.getTime() - fechaInicio.getTime();
         long dias = milisegundos / MS_DIA;
         return (int) dias + 1;
+    }
+
+    public double getPrecio() {
+        return PRECIO_DIA * dias + turismo.getCilindrada() / 100;
     }
     
 }
