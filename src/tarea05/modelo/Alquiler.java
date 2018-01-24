@@ -40,4 +40,15 @@ public class Alquiler {
         return dias;
     }
 
+    public void close() {
+        Date ahora = new Date();
+        dias = difDias(ahora, fecha);
+    }
+
+    private int difDias(Date fechaFin, Date fechaInicio) {
+        long milisegundos = fechaFin.getTime() - fechaInicio.getTime();
+        long dias = milisegundos / MS_DIA;
+        return (int) dias + 1;
+    }
+    
 }
