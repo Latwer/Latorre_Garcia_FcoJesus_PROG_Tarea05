@@ -12,4 +12,11 @@ public class AlquilerVehiculos {
     private final int MAX_CLIENTES = 25;
     private final int MAX_TURISMOS = 25;
     private final int MAX_ALQUILERES = 25;
+
+    public AlquilerVehiculos() {
+        clientes = new Cliente[MAX_CLIENTES];
+        turismos = new Turismo[MAX_TURISMOS];
+        alquileres = new Alquiler[MAX_ALQUILERES];
+    }
+    
 }
