@@ -66,4 +66,24 @@ public class AlquilerVehiculos {
             throw new ExcepcionAlquilerVehiculos("El array de clientes está lleno.");
         }
     }
+
+    public void delCliente(String dni) {
+        int posicion = 0;
+        boolean encontrado = false;
+        while (posicion < clientes.length && !encontrado) {
+            if (clientes[posicion] != null && clientes[posicion].getDni().equals(dni)) {
+                encontrado = true;
+            } else {
+                posicion++;
+            }
+        }
+        if (encontrado) {
+            for (int i = posicion; i < clientes.length - 1; i++) {
+                clientes[i] = clientes[i + 1];
+            }
+            clientes[clientes.length - 1] = null;
+        } else {
+            throw new ExcepcionAlquilerVehiculos("El cliente a borrar no existe");
+        }
+    }
 }
