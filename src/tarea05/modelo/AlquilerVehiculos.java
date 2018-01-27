@@ -122,4 +122,24 @@ public class AlquilerVehiculos {
             throw new ExcepcionAlquilerVehiculos("El array de turismos está lleno.");
         }
     }
+
+    public void delTurismo(String matricula) {
+        int posicion = 0;
+        boolean encontrado = false;
+        while (posicion < turismos.length && !encontrado) {
+            if (turismos[posicion] != null && turismos[posicion].getMatricula().equals(matricula)) {
+                encontrado = true;
+            } else {
+                posicion++;
+            }
+        }
+        if (encontrado) {
+            for (int i = posicion; i < turismos.length - 1; i++) {
+                turismos[i] = turismos[i + 1];
+            }
+            turismos[turismos.length - 1] = null;
+        } else {
+            throw new ExcepcionAlquilerVehiculos("El turismo a borrar no existe");
+        }
+    }
 }
