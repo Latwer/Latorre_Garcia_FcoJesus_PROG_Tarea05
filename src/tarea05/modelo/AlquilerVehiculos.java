@@ -103,4 +103,23 @@ public class AlquilerVehiculos {
             return null;
         }
     }
+
+    public void addTurismo(Turismo turismo) {
+        int posicion = 0;
+        boolean posicionEncontrada = false;
+        while (posicion < turismos.length && !posicionEncontrada) {
+            if (turismos[posicion] == null) {
+                posicionEncontrada = true;
+            } else if (turismos[posicion].getMatricula().equals(turismo.getMatricula())) {
+                throw new ExcepcionAlquilerVehiculos("Ya existe un turismo con esa matrícula");
+            } else {
+                posicion++;
+            }
+        }
+        if (posicionEncontrada) {
+            turismos[posicion] = turismo;
+        } else {
+            throw new ExcepcionAlquilerVehiculos("El array de turismos está lleno.");
+        }
+    }
 }
