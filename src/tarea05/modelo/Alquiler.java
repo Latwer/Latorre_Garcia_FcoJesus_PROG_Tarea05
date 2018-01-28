@@ -43,6 +43,7 @@ public class Alquiler {
     public void close() {
         Date ahora = new Date();
         dias = difDias(ahora, fecha);
+        turismo.setDisponible(true);
     }
 
     private int difDias(Date fechaFin, Date fechaInicio) {

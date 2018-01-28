@@ -16,10 +16,10 @@ public class Turismo {
         marca = turismo.getMarca();
         modelo = turismo.getModelo();
         cilindrada = turismo.getCilindrada();
+        disponible=turismo.getDisponible();
     }
 
     public Turismo(String matricula, String marca, String modelo, int cilindrada) {
-        //this.propietario=propietario;
         //Matricula
         if (compruebaMatricula(matricula)) {
             this.matricula = matricula;
@@ -36,6 +36,7 @@ public class Turismo {
         } else {
             throw new ExcepcionAlquilerVehiculos("Cilindrada no válida");
         }
+        
     }
 
     private boolean compruebaMatricula(String matricula) {
@@ -70,7 +71,7 @@ public class Turismo {
 
     @Override
     public String toString() {
-        return String.format("Matrícula: %s, Marca: %s Modelo: %s Cilindrada: %d%n",
+        return String.format("Matrícula: %s, Marca: %s, Modelo: %s, Cilindrada: %d%n",
                 matricula, marca, modelo, cilindrada);
     }
 }
